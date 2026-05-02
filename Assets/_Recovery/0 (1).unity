@@ -795,11 +795,11 @@ MonoBehaviour:
   spherePrefab: {fileID: 567827168}
   raft: {fileID: 683448772}
   radius: 5
-  totalTrials: 20
-  minRadius: 5
-  maxRadius: 15
+  totalTrials: 10
+  minRadius: 3
+  maxRadius: 8
   minHeight: 0.5
-  maxHeight: 10
+  maxHeight: 2
 --- !u!4 &1251646424
 Transform:
   m_ObjectHideFlags: 0
@@ -832,7 +832,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 980a5cd3c9d8f70438b0761686fa61d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VRRaycastInteractor
-  rayLength: 20
+  rayLength: 10
   targetLayer:
     serializedVersion: 2
     m_Bits: 8

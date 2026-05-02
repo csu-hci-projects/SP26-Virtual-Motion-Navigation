@@ -383,7 +383,7 @@ PrefabInstance:
       addedObject: {fileID: 30659769}
     - targetCorrespondingSourceObject: {fileID: 1670256624, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1419792967}
+      addedObject: {fileID: 1504987403}
   m_SourcePrefab: {fileID: 100100000, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
 --- !u!1 &567827168 stripped
 GameObject:
@@ -795,11 +795,7 @@ MonoBehaviour:
   spherePrefab: {fileID: 567827168}
   raft: {fileID: 683448772}
   radius: 5
-  totalTrials: 20
-  minRadius: 5
-  maxRadius: 15
-  minHeight: 0.5
-  maxHeight: 10
+  totalTrials: 10
 --- !u!4 &1251646424
 Transform:
   m_ObjectHideFlags: 0
@@ -815,27 +811,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1419792961 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1670256624, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-  m_PrefabInstance: {fileID: 441087506}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1419792967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1419792961}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 980a5cd3c9d8f70438b0761686fa61d2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::VRRaycastInteractor
-  rayLength: 20
-  targetLayer:
-    serializedVersion: 2
-    m_Bits: 8
 --- !u!1 &1495163538 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
@@ -855,6 +830,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::VRCameraRig
   raft: {fileID: 683448772}
   positionOffset: {x: 0, y: 1.6, z: 0}
+--- !u!1 &1504987397 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1670256624, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 441087506}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1504987403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1504987397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980a5cd3c9d8f70438b0761686fa61d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::VRRaycastInteractor
+  rayLength: 10
+  targetLayer:
+    serializedVersion: 2
+    m_Bits: 0
+  dwellTimeToSelect: 1.5
 --- !u!1 &2092139007
 GameObject:
   m_ObjectHideFlags: 0
@@ -954,21 +951,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: Goal_Sphere
       objectReference: {fileID: 0}
-    - target: {fileID: 8055177198787702981, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8055177198787702981, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8055177198787702981, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
-      propertyPath: m_LocalScale.z
+    - target: {fileID: 3728267045741868154, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
+      propertyPath: m_Radius
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8055177198787702981, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: -0.100000024
       objectReference: {fileID: 0}
     - target: {fileID: 8055177198787702981, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
       propertyPath: m_LocalPosition.y
@@ -984,15 +973,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8055177198787702981, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8055177198787702981, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8055177198787702981, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8055177198787702981, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x

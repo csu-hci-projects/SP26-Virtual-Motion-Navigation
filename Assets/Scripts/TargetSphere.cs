@@ -5,7 +5,7 @@ public class TargetSphere : MonoBehaviour
     private Renderer rend;
     private Color originalColor;
 
-    public System.Action onSelected; // callback to manager
+    public System.Action onSelected; 
 
     void Start()
     {
@@ -15,7 +15,7 @@ public class TargetSphere : MonoBehaviour
 
     public void OnHoverEnter()
     {
-        rend.material.color = Color.yellow; // highlight
+        rend.material.color = Color.yellow; 
     }
 
     public void OnHoverExit()
@@ -25,6 +25,6 @@ public class TargetSphere : MonoBehaviour
 
     public void Select()
     {
-        onSelected?.Invoke(); // notify manager
+        onSelected?.Invoke(); 
     }
 }
