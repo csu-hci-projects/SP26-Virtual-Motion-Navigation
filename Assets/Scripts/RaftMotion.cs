@@ -9,7 +9,7 @@ public class RaftMotion : MonoBehaviour
     public float baseTiltSpeed = 0.5f;
 
     [Header("Current Intensity Multiplier")]
-    public float intensity = 1.0f;
+    public float intensity = 1f;
 
     private Vector3 startPos;
 
