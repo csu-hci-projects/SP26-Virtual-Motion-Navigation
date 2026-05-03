@@ -4,7 +4,7 @@ using UnityEngine.XR;
 public class VRRaycastInteractor : MonoBehaviour
 {
     [Header("Ray Settings")]
-    public float rayLength = 10f;
+    public float rayLength = 20f;
     public LayerMask targetLayer;
 
     private TargetSphere currentHovered;
@@ -15,14 +15,26 @@ public class VRRaycastInteractor : MonoBehaviour
             .TryGetFeatureValue(CommonUsages.triggerButton, out bool triggerPressed);
 
         Ray ray = new Ray(transform.position, transform.forward);
-        RaycastHit hit;
-
         Debug.DrawRay(transform.position, transform.forward * rayLength, Color.red);
+        Debug.DrawRay(transform.position, transform.up * rayLength, Color.green);
+        Debug.DrawRay(transform.position, transform.right * rayLength, Color.blue);
 
-        if (Physics.Raycast(ray, out hit, rayLength, targetLayer))
+        // Debug: hit anything regardless of layer
+        if (Physics.Raycast(ray, out RaycastHit debugHit, rayLength))
         {
-            TargetSphere sphere = hit.collider.GetComponent<TargetSphere>();
+            Debug.Log("Hit something: " + debugHit.collider.gameObject.name + " layer: " + debugHit.collider.gameObject.layer);
+        }
 
+        if (Physics.Raycast(ray, out RaycastHit hit, rayLength, targetLayer))
+        {
+            StartButton startButton = hit.collider.GetComponent<StartButton>();
+            if (startButton != null && triggerPressed)
+            {
+                startButton.OnStartPressed();
+                return;
+            }
+
+            TargetSphere sphere = hit.collider.GetComponent<TargetSphere>();
             if (sphere != null)
             {
                 if (sphere != currentHovered)

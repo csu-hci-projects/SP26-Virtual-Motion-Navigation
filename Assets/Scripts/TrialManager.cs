@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TrialManager : MonoBehaviour
 {
+    public IntensityUI intensityUI;
     public GameObject spherePrefab;
     public Transform raft;
     public float radius = 10f;
@@ -10,9 +11,15 @@ public class TrialManager : MonoBehaviour
     private int currentTrial = 0;
     private GameObject currentSphere;
 
+    public void StartTrials()
+    {
+        intensityUI.ApplyIntensity();
+        currentTrial = 0;
+        SpawnSphere();
+    }
     void Start()
     {
-        SpawnSphere();
+        //wait for menu
     }
 
     [Header("Spawn Settings")]

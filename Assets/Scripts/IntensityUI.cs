@@ -3,24 +3,38 @@ using UnityEngine;
 public class IntensityUI : MonoBehaviour
 {
     public RaftMotion raftMotion;
+    public StartButton startButton;
+    public GameObject intensityPanel;
+
+    private float selectedIntensity = 1.0f;
 
     public void SetLow()
     {
-        raftMotion.SetIntensity(0.5f);
+        selectedIntensity = 0.5f;
+        startButton.Show();
     }
 
     public void SetMedium()
     {
-        raftMotion.SetIntensity(1.0f);
+        selectedIntensity = 1.0f;
+        startButton.Show();
     }
 
     public void SetHigh()
     {
-        raftMotion.SetIntensity(1.5f);
+        selectedIntensity = 1.5f;
+        startButton.Show();
     }
 
     public void SetExtreme()
     {
-        raftMotion.SetIntensity(2.0f);
+        selectedIntensity = 2.0f;
+        startButton.Show();
+    }
+
+    public void ApplyIntensity()
+    {
+        raftMotion.SetIntensity(selectedIntensity);
+        intensityPanel.SetActive(false);
     }
 }

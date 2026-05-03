@@ -594,10 +594,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1142518704764219382, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: m_Enabled
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Name
       value: XR Origin (XR Rig)
@@ -645,10 +641,6 @@ PrefabInstance:
     - target: {fileID: 1717954561962503726, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3074471628601745017, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
-      propertyPath: m_CastDistance
-      value: 20
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1265,7 +1257,7 @@ GameObject:
   - component: {fileID: 793426075}
   - component: {fileID: 793426077}
   - component: {fileID: 793426076}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Text (TMP)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1935,7 +1927,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336016504}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980a5cd3c9d8f70438b0761686fa61d2, type: 3}
   m_Name: 
@@ -1956,7 +1948,7 @@ GameObject:
   - component: {fileID: 1345542584}
   - component: {fileID: 1345542583}
   - component: {fileID: 1345542582}
-  m_Layer: 3
+  m_Layer: 6
   m_Name: Start Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2058,7 +2050,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419792961}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 980a5cd3c9d8f70438b0761686fa61d2, type: 3}
   m_Name: 
@@ -2177,8 +2169,8 @@ GameObject:
   - component: {fileID: 1869733111}
   - component: {fileID: 1869733110}
   - component: {fileID: 1869733109}
-  - component: {fileID: 1869733112}
   - component: {fileID: 1869733113}
+  - component: {fileID: 1869733112}
   m_Layer: 3
   m_Name: Start
   m_TagString: Untagged
@@ -2250,9 +2242,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1869733107}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: StartButton, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: OnStartPressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2334,7 +2326,7 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 100, y: 30, z: 1}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &2046175592
 GameObject:
@@ -2673,10 +2665,6 @@ PrefabInstance:
     - target: {fileID: 1413787004365175359, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
       propertyPath: m_Name
       value: Goal_Sphere
-      objectReference: {fileID: 0}
-    - target: {fileID: 3728267045741868154, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
-      propertyPath: m_Radius
-      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8055177198787702981, guid: 0e6567b94fb4c31439c59427299ec574, type: 3}
       propertyPath: m_LocalScale.x
