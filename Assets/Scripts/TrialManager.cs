@@ -5,6 +5,7 @@ public class TrialManager : MonoBehaviour
     public IntensityUI intensityUI;
     public ExperimentCSVLogger csvLogger;
     public GameObject spherePrefab;
+    public GameObject endScreenCanvas;
     public Transform raft;
     public int totalTrials = 20;
 
@@ -32,6 +33,7 @@ public class TrialManager : MonoBehaviour
         if (currentTrial >= totalTrials)
         {
             csvLogger.SaveToFile();
+            endScreenCanvas.SetActive(true);
             Debug.Log("Trial complete!");
             return;
         }
