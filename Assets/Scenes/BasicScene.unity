@@ -1922,7 +1922,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IntensityUI
   raftMotion: {fileID: 683448773}
   startButton: {fileID: 1869733112}
-  intensityPanel: {fileID: 1251646422}
+  intensityPanel: {fileID: 1854550444}
 --- !u!1 &1336016504 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8748500131873809389, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
