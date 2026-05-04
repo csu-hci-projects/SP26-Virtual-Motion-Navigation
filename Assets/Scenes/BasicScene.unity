@@ -1865,6 +1865,7 @@ GameObject:
   - component: {fileID: 1251646424}
   - component: {fileID: 1251646423}
   - component: {fileID: 1251646425}
+  - component: {fileID: 1251646426}
   m_Layer: 0
   m_Name: ExperimentManager
   m_TagString: Untagged
@@ -1885,9 +1886,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrialManager
   intensityUI: {fileID: 1251646425}
+  csvLogger: {fileID: 1251646426}
   spherePrefab: {fileID: 567827168}
   raft: {fileID: 683448772}
-  radius: 5
   totalTrials: 20
   minRadius: 5
   maxRadius: 15
@@ -1923,6 +1924,19 @@ MonoBehaviour:
   raftMotion: {fileID: 683448773}
   startButton: {fileID: 1869733112}
   intensityPanel: {fileID: 1854550444}
+--- !u!114 &1251646426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1251646422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ac62961080b21b47aeaf2ededfb7070, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ExperimentCSVLogger
+  outputFileName: MotionSickness_Output.csv
 --- !u!1 &1336016504 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8748500131873809389, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
